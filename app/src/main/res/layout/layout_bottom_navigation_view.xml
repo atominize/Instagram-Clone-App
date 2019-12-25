@@ -1,4 +1,5 @@
-<merge xmlns:android="http://schemas.android.com/apk/res/android">
+<merge xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
 
     <androidx.coordinatorlayout.widget.CoordinatorLayout
         android:layout_width="match_parent"
@@ -9,10 +10,11 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content">
 
-            <com.google.android.material.bottomnavigation.BottomNavigationView
+            <com.ittianyu.bottomnavigationviewex.BottomNavigationViewEx
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:id="@+id/bnBottomNav"/>
+                android:id="@+id/bnBottomNav"
+                app:menu="@menu/bottom_navigation_menu"/>
 
         </com.google.android.material.bottomappbar.BottomAppBar>
 
