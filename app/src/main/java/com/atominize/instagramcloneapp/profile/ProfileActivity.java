@@ -1,16 +1,19 @@
-package com.atominize.instagramcloneapp;
+package com.atominize.instagramcloneapp.profile;
 
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.os.Bundle;
 import android.util.Log;
+import android.view.Menu;
+import android.view.MenuItem;
 
+import com.atominize.instagramcloneapp.R;
 import com.atominize.instagramcloneapp.utils.BottomNavigationViewHelper;
 import com.ittianyu.bottomnavigationviewex.BottomNavigationViewEx;
 
-public class HomeActivity extends AppCompatActivity {
+public class ProfileActivity extends AppCompatActivity {
 
-    private static final String TAG = "HomeActivity";
+    private static final String TAG = "ProfileActivity";
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -25,5 +28,10 @@ public class HomeActivity extends AppCompatActivity {
 
         BottomNavigationViewEx bottomNavigationViewEx = findViewById(R.id.bnBottomNav);
         BottomNavigationViewHelper.setupBottomNavigationView(bottomNavigationViewEx);
+        BottomNavigationViewHelper.enableNavigation(ProfileActivity.this, bottomNavigationViewEx);
+
+        Menu menu = bottomNavigationViewEx.getMenu();
+        MenuItem menuItem = menu.getItem(4);
+        menuItem.setChecked(true);
     }
 }
