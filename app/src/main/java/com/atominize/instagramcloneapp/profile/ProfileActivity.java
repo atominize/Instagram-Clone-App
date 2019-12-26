@@ -1,6 +1,7 @@
 package com.atominize.instagramcloneapp.profile;
 
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.appcompat.widget.Toolbar;
 
 import android.os.Bundle;
 import android.util.Log;
@@ -18,9 +19,31 @@ public class ProfileActivity extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_home);
+        setContentView(R.layout.activity_profile);
 
         setupBottomNavigationView();
+        setupToolBar();
+    }
+
+    private void setupToolBar() {
+        Toolbar toolbar = findViewById(R.id.tbProfile);
+        setSupportActionBar(toolbar);
+
+        toolbar.setOnMenuItemClickListener(new Toolbar.OnMenuItemClickListener() {
+            @Override
+            public boolean onMenuItemClick(MenuItem item) {
+
+                Log.d(TAG, "onMenuItemClick: clicked menu item" + item);
+
+                switch (item.getItemId()) {
+                    case R.id.profileMenu:
+                        Log.d(TAG, "onMenuItemClick: Navigating to profile preferences");
+
+                }
+
+                return false;
+            }
+        });
     }
 
     private void setupBottomNavigationView() {
@@ -33,5 +56,11 @@ public class ProfileActivity extends AppCompatActivity {
         Menu menu = bottomNavigationViewEx.getMenu();
         MenuItem menuItem = menu.getItem(4);
         menuItem.setChecked(true);
+    }
+
+    @Override
+    public boolean onCreateOptionsMenu(Menu menu) {
+        getMenuInflater().inflate(R.menu.profile_menu, menu);
+        return true;
     }
 }
