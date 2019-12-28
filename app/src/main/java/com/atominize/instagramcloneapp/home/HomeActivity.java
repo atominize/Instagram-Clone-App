@@ -6,11 +6,10 @@ import androidx.viewpager.widget.ViewPager;
 import android.graphics.Color;
 import android.os.Bundle;
 import android.util.Log;
-import android.view.Menu;
-import android.view.MenuItem;
 
 import com.atominize.instagramcloneapp.R;
 import com.atominize.instagramcloneapp.utils.BottomNavigationViewHelper;
+import com.atominize.instagramcloneapp.utils.SectionsPagerAdapter;
 import com.google.android.material.tabs.TabLayout;
 import com.ittianyu.bottomnavigationviewex.BottomNavigationViewEx;
 

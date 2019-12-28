@@ -1,4 +1,4 @@
-package com.atominize.instagramcloneapp.home;
+package com.atominize.instagramcloneapp.utils;
 
 import androidx.annotation.NonNull;
 import androidx.fragment.app.Fragment;
