@@ -8,6 +8,7 @@
         <androidx.appcompat.widget.Toolbar
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:background="@drawable/white_grey_border_bottom"
             android:id="@+id/tbProfile">
 
             <RelativeLayout
@@ -19,9 +20,9 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_centerVertical="true"
-                    android:text="mitch.tabian"
+                    android:text="atominize"
                     android:textSize="20sp"
-                    android:textColor="@color/colorPrimaryDark"
+                    android:textColor="@color/colorBlack"
                     android:layout_marginStart="15dp"
                     android:layout_marginLeft="15dp"/>
 
