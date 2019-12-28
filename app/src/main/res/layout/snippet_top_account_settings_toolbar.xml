@@ -15,27 +15,28 @@
                 android:layout_width="match_parent"
                 android:layout_height="match_parent">
 
+                <ImageView
+                    android:id="@+id/ivBack"
+                    android:layout_width="30dp"
+                    android:layout_height="30dp"
+                    android:layout_marginRight="20dp"
+                    android:layout_marginEnd="20dp"
+                    android:layout_centerVertical="true"
+                    android:src="@drawable/ic_back_arrow"
+                    />
+
                 <TextView
                     android:id="@+id/tvProfileName"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_centerVertical="true"
-                    android:text="atominize"
+                    android:layout_toEndOf="@+id/ivBack"
+                    android:layout_toRightOf="@+id/ivBack"
+                    android:text="Options"
                     android:textSize="20sp"
                     android:textColor="@color/colorBlack"
-                    android:layout_marginStart="15dp"
-                    android:layout_marginLeft="15dp"/>
-
-                <ImageView
-                    android:id="@+id/ivProfileMenu"
-                    android:layout_width="30dp"
-                    android:layout_height="30dp"
-                    android:layout_alignParentRight="true"
-                    android:layout_alignParentEnd="true"
-                    android:layout_marginRight="20dp"
-                    android:layout_centerVertical="true"
-                    android:src="@drawable/ic_more_vert"
-                    />
+                    android:layout_marginLeft="15dp"
+                    android:layout_marginStart="15dp"/>
 
             </RelativeLayout>
 

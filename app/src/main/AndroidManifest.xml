@@ -13,6 +13,7 @@
         <activity android:name=".profile.ProfileActivity" />
         <activity android:name=".share.ShareActivity" />
         <activity android:name=".search.SearchActivity" />
+        <activity android:name=".profile.AccountSettingsActivity"/>
         <activity android:name=".home.HomeActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
