@@ -1,0 +1,212 @@
+<?xml version="1.0" encoding="utf-8"?>
+<merge xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/colorWhite"
+            android:padding="20dp">
+
+            <de.hdodenhof.circleimageview.CircleImageView
+                android:id="@+id/ciProfileImage"
+                android:layout_width="120dp"
+                android:layout_height="120dp"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="20dp"
+                app:civ_border_color="@color/colorBlack"
+                app:civ_border_width="2dp" />
+
+            <TextView
+                android:id="@+id/tvChangeProfile"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/ciProfileImage"
+                android:layout_centerHorizontal="true"
+                android:text="Change Profile"
+                android:textColor="@color/colorBlue"
+                android:textSize="16sp" />
+
+            <RelativeLayout
+                android:id="@+id/rlOne"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:layout_below="@+id/tvChangeProfile"
+                android:layout_marginTop="80dp"
+                android:background="@drawable/grey_border_bottom">
+
+                <ImageView
+                    android:layout_width="35dp"
+                    android:layout_height="35dp"
+                    android:layout_centerVertical="true"
+                    android:src="@drawable/ic_username" />
+
+                <EditText
+                    android:id="@+id/etUsername"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_marginStart="40dp"
+                    android:layout_marginLeft="40dp"
+                    android:background="@null"
+                    android:hint="Username"
+                    android:inputType="textNoSuggestions" />
+
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/rlTwo"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:layout_below="@+id/rlOne"
+                android:layout_marginTop="15dp"
+                android:background="@drawable/grey_border_bottom">
+
+                <ImageView
+                    android:layout_width="35dp"
+                    android:layout_height="35dp"
+                    android:layout_centerVertical="true"
+                    android:src="@drawable/ic_display_name" />
+
+                <EditText
+                    android:id="@+id/etDisplayName"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_marginStart="40dp"
+                    android:layout_marginLeft="40dp"
+                    android:background="@null"
+                    android:hint="Display Name"
+                    android:inputType="textNoSuggestions" />
+
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/rlThree"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:layout_below="@+id/rlTwo"
+                android:layout_marginTop="15dp"
+                android:background="@drawable/grey_border_bottom">
+
+                <ImageView
+                    android:layout_width="35dp"
+                    android:layout_height="35dp"
+                    android:layout_centerVertical="true"
+                    android:src="@drawable/ic_web" />
+
+                <EditText
+                    android:id="@+id/etWebsite"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_marginStart="40dp"
+                    android:layout_marginLeft="40dp"
+                    android:background="@null"
+                    android:hint="Website"
+                    android:inputType="textWebEditText" />
+
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/rlFour"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:layout_below="@+id/rlThree"
+                android:layout_marginTop="15dp"
+                android:background="@drawable/grey_border_bottom">
+
+                <ImageView
+                    android:layout_width="35dp"
+                    android:layout_height="35dp"
+                    android:layout_centerVertical="true"
+                    android:src="@drawable/ic_description" />
+
+                <EditText
+                    android:id="@+id/etDescription"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_marginStart="40dp"
+                    android:layout_marginLeft="40dp"
+                    android:background="@null"
+                    android:hint="Description"
+                    android:inputType="textNoSuggestions" />
+
+            </RelativeLayout>
+
+            <TextView
+                android:id="@+id/tvPrivateInfo"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/rlFour"
+                android:text="PRIVATE INFORMATION"
+                android:textSize="25sp"
+                android:layout_marginTop="50dp"
+                android:layout_centerHorizontal="true"
+                android:textColor="@color/colorBlack"
+                android:background="@drawable/grey_border_bottom"/>
+
+            <RelativeLayout
+                android:id="@+id/rlFive"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:layout_below="@+id/tvPrivateInfo"
+                android:layout_marginTop="15dp"
+                android:background="@drawable/grey_border_bottom">
+
+                <ImageView
+                    android:layout_width="35dp"
+                    android:layout_height="35dp"
+                    android:layout_centerVertical="true"
+                    android:src="@drawable/ic_email" />
+
+                <EditText
+                    android:id="@+id/etEmail"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_marginStart="40dp"
+                    android:layout_marginLeft="40dp"
+                    android:background="@null"
+                    android:hint="Email"
+                    android:inputType="textEmailAddress" />
+
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/rlSix"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:layout_below="@+id/rlFive"
+                android:layout_marginTop="15dp"
+                android:background="@drawable/grey_border_bottom">
+
+                <ImageView
+                    android:layout_width="35dp"
+                    android:layout_height="35dp"
+                    android:layout_centerVertical="true"
+                    android:src="@drawable/ic_phone" />
+
+                <EditText
+                    android:id="@+id/etPhoneNumber"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_marginStart="40dp"
+                    android:layout_marginLeft="40dp"
+                    android:background="@null"
+                    android:hint="Phone Number"
+                    android:inputType="phone" />
+
+            </RelativeLayout>
+
+        </RelativeLayout>
+
+    </ScrollView>
+
+</merge>
