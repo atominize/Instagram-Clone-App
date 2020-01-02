@@ -9,23 +9,67 @@ import android.util.Log;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
+import android.widget.GridView;
 import android.widget.ImageView;
 
 import com.atominize.instagramcloneapp.R;
 import com.atominize.instagramcloneapp.utils.BottomNavigationViewHelper;
+import com.atominize.instagramcloneapp.utils.GridImageAdapter;
 import com.ittianyu.bottomnavigationviewex.BottomNavigationViewEx;
+import com.squareup.picasso.Picasso;
+
+import java.util.ArrayList;
+
+import de.hdodenhof.circleimageview.CircleImageView;
 
 public class ProfileActivity extends AppCompatActivity {
 
     private static final String TAG = "ProfileActivity";
+
+    private CircleImageView profileImage;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_profile);
 
+        setupWidgets();
         setupBottomNavigationView();
         setupToolBar();
+
+        setImageProfile();
+
+        tempGridSetup();
+    }
+
+    private void tempGridSetup() {
+        ArrayList<String> imageUrls = new ArrayList<>();
+        imageUrls.add("https://www.gstatic.com/webp/gallery/1.jpg");
+        imageUrls.add("https://www.gstatic.com/webp/gallery/2.jpg");
+        imageUrls.add("https://www.gstatic.com/webp/gallery/3.jpg");
+        imageUrls.add("https://www.gstatic.com/webp/gallery/4.jpg");
+        imageUrls.add("https://www.gstatic.com/webp/gallery/5.jpg");
+
+        setupImageGrid(imageUrls);
+    }
+
+    private void setupImageGrid(ArrayList<String> imageUrls) {
+        GridView gridView = findViewById(R.id.gvOne);
+
+        GridImageAdapter adapter = new GridImageAdapter(ProfileActivity.this,
+                R.layout.layout_grid_image_view, imageUrls);
+
+        gridView.setAdapter(adapter);
+    }
+
+    private void setImageProfile() {
+        Log.d(TAG, "setImageProfile: setting profile image");
+
+        Picasso.get().load(R.mipmap.ic_launcher).into(profileImage);
+    }
+
+    private void setupWidgets() {
+        profileImage = findViewById(R.id.profile_image);
     }
 
     private void setupToolBar() {

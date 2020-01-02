@@ -1,5 +1,6 @@
 package com.atominize.instagramcloneapp.profile;
 
+import android.graphics.Color;
 import android.os.Bundle;
 import android.util.Log;
 import android.view.View;
@@ -13,7 +14,10 @@ import androidx.appcompat.app.AppCompatActivity;
 import androidx.viewpager.widget.ViewPager;
 
 import com.atominize.instagramcloneapp.R;
+import com.atominize.instagramcloneapp.home.HomeActivity;
+import com.atominize.instagramcloneapp.utils.BottomNavigationViewHelper;
 import com.atominize.instagramcloneapp.utils.SectionsStatePagerAdapter;
+import com.ittianyu.bottomnavigationviewex.BottomNavigationViewEx;
 
 import java.util.ArrayList;
 
@@ -36,6 +40,7 @@ public class AccountSettingsActivity extends AppCompatActivity {
         viewPager = findViewById(R.id.vpContainer);
         relativeLayout = findViewById(R.id.rlOne);
 
+        setupBottomNavigationView();
         goBack();
         settingsList();
         setupFragment();
@@ -86,5 +91,21 @@ public class AccountSettingsActivity extends AppCompatActivity {
                 setupViewPager(i);
             }
         });
+    }
+
+    private void setupBottomNavigationView() {
+        Log.d(TAG, "setupBottomNavigationView: setting up bottom navigation view");
+
+        BottomNavigationViewEx bottomNavigationViewEx = findViewById(R.id.bnBottomNav);
+        BottomNavigationViewHelper.setupBottomNavigationView(bottomNavigationViewEx);
+        BottomNavigationViewHelper.enableNavigation(AccountSettingsActivity.this, bottomNavigationViewEx);
+
+//        Menu menu = bottomNavigationViewEx.getMenu();
+//        MenuItem menuItem = menu.getItem(0);
+//        menuItem.setChecked(true);
+
+        bottomNavigationViewEx.setItemBackground(0, Color.RED);
+
+
     }
 }
