@@ -32,7 +32,7 @@ public class GridImageAdapter extends ArrayAdapter<String> {
     }
 
     private static class ViewHolder {
-        ImageView imageView;
+        SquareImageView imageView;
         ProgressBar progressBar;
     }
 

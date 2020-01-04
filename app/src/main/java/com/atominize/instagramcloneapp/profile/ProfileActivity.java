@@ -56,6 +56,10 @@ public class ProfileActivity extends AppCompatActivity {
     private void setupImageGrid(ArrayList<String> imageUrls) {
         GridView gridView = findViewById(R.id.gvOne);
 
+        int gridWidth = getResources().getDisplayMetrics().widthPixels;
+        int imageWidth = gridWidth / 3;
+        gridView.setColumnWidth(imageWidth);
+
         GridImageAdapter adapter = new GridImageAdapter(ProfileActivity.this,
                 R.layout.layout_grid_image_view, imageUrls);
 
