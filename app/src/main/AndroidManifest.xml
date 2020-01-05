@@ -11,7 +11,9 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".likes.LikesActivity"></activity>
+        <activity android:name=".login.RegisterActivity"/>
+        <activity android:name=".login.LoginActivity"/>
+        <activity android:name=".likes.LikesActivity"/>
         <activity android:name=".profile.ProfileActivity" />
         <activity android:name=".share.ShareActivity" />
         <activity android:name=".search.SearchActivity" />
